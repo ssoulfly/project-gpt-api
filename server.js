@@ -10,8 +10,6 @@ app.use(cors());
 
 const RouterLoader = require("./middlewares/RouterLoader");
 const config = require("./config");
-const {createGPTMessage} = require('./services/gpt-api/createGPTMessage.js')
-
 
 const Loader = new RouterLoader({
   path: path.join(__dirname, "routers"),
@@ -27,12 +25,6 @@ mongoose
 
     const listener = app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
       console.log("Server Started " + listener.address().port + " Port!");
-      createGPTMessage([
-   {
-     role: "user", 
-      content: "mongodb hakkında bilgi verirmisin?",
-   }
-]).then(console.log)
     });
   })
   .catch((err) => {

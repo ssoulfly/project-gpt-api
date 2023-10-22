@@ -17,9 +17,4 @@
     "node": "16.x"
   },
   "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
 }
